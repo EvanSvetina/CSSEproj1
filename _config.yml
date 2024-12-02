@@ -9,9 +9,9 @@ remote_theme: jekyll/minima
 minima:
   skin: dark
   social_links:
-    - { platform: IDOL, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa"}
-    - { platform: IDOL, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa" }
-    - { platform: IDOL, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa" } 
+    - { platform: github, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa"}
+    - { platform: x, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa" }
+    - { platform: youtube, user_url: "https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=f0bcbc244c1345fa" } 
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
