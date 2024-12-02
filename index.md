@@ -5,4 +5,7 @@ description: Home Page
 hide: true
 ---
 
-My journey starts here.
+What's up gang!
+
+https://open.spotify.com/track/1hAloWiinXLPQUJxrJReb1?si=a879848f00d746ca
+Fun Fact: Above song bangs.
