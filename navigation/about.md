@@ -36,7 +36,7 @@ Mfs making a single inside joke: (Those who know + knee surgery + german stare +
 </head>
 <body>
     <p>Man, I love cheat codes (especially really famous ones)...</p>
-    <div id="secretMessage"><a href="https://open.spotify.com/track/7ovUcF5uHTBRzUpB6ZOmvt?si=bc53a5e718554bac" target="_blank">Secret?</div>
+    <div id="secretMessage"><a href="https://open.spotify.com/track/7ovUcF5uHTBRzUpB6ZOmvt?si=bc53a5e718554bac" target="_blank">Secret?
 
 <script>
         const konamiCode = [
@@ -63,4 +63,3 @@ Mfs making a single inside joke: (Those who know + knee surgery + german stare +
             }
         });
     </script>
-</body>
