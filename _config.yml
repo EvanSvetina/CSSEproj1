@@ -1,5 +1,5 @@
 title: Evan's Goofy Ahh Blog
-description: Go visit the other blog
+description: Hello there, traveler
 owner_name: Evan Svetina
 github_username: EvanSvetina
 github_repo: "CSSEproj1" 
@@ -15,8 +15,8 @@ minima:
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
-# remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: pages-themes/time-machine@v0.2.0
+remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
   - jekyll-remote-theme
 header_pages:
