@@ -9,7 +9,7 @@ permalink: /about/
 
 
 People after making a single inside joke: (Those who know + knee surgery + german stare + balkan rage + still water + put the fries in the bag)
-<img src="https://media.tenor.com/4IAhPKnwc5sAAAAM/those-who-know-trollge.gif
+<br><img src="https://media.tenor.com/4IAhPKnwc5sAAAAM/those-who-know-trollge.gif
 " width="120" length="120" alt="Image Didn't Load">
 </b3>
 
@@ -21,7 +21,7 @@ People after making a single inside joke: (Those who know + knee surgery + germa
 <b2><span><a href="https://nikhile22427.github.io/oshinoko" style="color:purple" target="_blank">Obligatory Partner Blog Plug</a></b2></span> <br>
 </a>
 <h4>If you made it through all that, thanks for your time. Here's a little more about me!</h4><br>
-<b4><p>I am born and raised in the United States, but both my parents immigrated in from Europe; My dad drom Croatia, and my mom from Ukraine.<br>
+<b4><p>I am born and raised in the United States, but both my parents immigrated in from Europe; My dad from Croatia, and my mom from Ukraine.<br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg" alt="Flag of Croatia" width="250"><img src="https://www.worldatlas.com/r/w960-q80/img/flag/ua-flag.jpg" alt="Flag of Ukraine" width="200"><br>
 </body>
 </body>
@@ -49,7 +49,7 @@ My favorite video games of ALL TIME are:
     </ul>
     <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2020/10/riskofrain.jpg?fit=1280%2C720&ssl=1" alt="ROR2" width="350">
     
-If you know any of these games even remotely, please contact me with my discord username "pika43" ad I will talk your ear off for days on end.<br>
+If you know any of these games even remotely, please contact me with my discord username "pika43" and I will talk your ear off for days on end.<br>
 My favorite Music genres are:
 <ul>
         <li>Rock/Metal</li>
@@ -73,12 +73,19 @@ My "Everything" playlist: <iframe style="border-radius:12px" src="https://open.s
             text-align: center;
             margin-top: 20px;
         }
+        #clickit {
+            background-color: #000000
+            color: red;
+            text-align: center;
+        }
     </style>
+
 </head>
+
 <body>
+<a id="clickit" href="thegamer221148.github.io/clickit">Click Me</a>
     <p><sub>Man, I love cheat codes (especially really famous ones)... If only someone knew how to input one... SURELY you don't know...</p><subscript>
     <div id="secretMessage"><a href="https://open.spotify.com/track/7ovUcF5uHTBRzUpB6ZOmvt?si=bc53a5e718554bac" target="_blank">Secret?
-
 <script>
         const konamiCode = [
             "ArrowUp", "ArrowUp",
