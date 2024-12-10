@@ -18,13 +18,12 @@ People after making a single inside joke: (Those who know + knee surgery + germa
 
 </b1>
 <br>
-<b2><span><a href="https://nikhile22427.github.io/oshinoko" style="color:purple" target="_blank">Obligatory Partner Blog Plug</a></b2></span> <br>
-</a>
+<b2><span><a href="https://nikhile22427.github.io/oshinoko" style="color:purple" target="_blank">Obligatory Partner Blog Plug</a></span> <br>
+
 <h4>If you made it through all that, thanks for your time. Here's a little more about me!</h4><br>
 <b4><p>I am born and raised in the United States, but both my parents immigrated in from Europe; My dad from Croatia, and my mom from Ukraine.<br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg" alt="Flag of Croatia" width="250"><img src="https://www.worldatlas.com/r/w960-q80/img/flag/ua-flag.jpg" alt="Flag of Ukraine" width="200"><br>
-</body>
-</body>
+
 My favorite pastimes are playing videogames, fencing, swimming (at the beach or a pool), watching anime, and socializing.<br>
 My family loves to travel. I've been to many places, such as:
 <ul>
@@ -36,7 +35,7 @@ My family loves to travel. I've been to many places, such as:
         <li>D.C and New York (East Coast trip in 8th Grade)</li>
         <li>Hawaii</li>
     </ul>
-    <img src="https://www.travelandleisure.com/thmb/Ua7bw3FOYo_RVFm0F2FMoXpF7uI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Zlatni-Rat-Beach-CROATIA0316-277e5a2d83b9425eb72d3188ac5d1eb6.jpg" alt="Croatia Beach" width="350">
+    <img src="https://www.travelandleisure.com/thmb/Ua7bw3FOYo_RVFm0F2FMoXpF7uI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Zlatni-Rat-Beach-CROATIA0316-277e5a2d83b9425eb72d3188ac5d1eb6.jpg" alt="Croatia Beach" width="350"><br>
 
 My favorite video games of ALL TIME are:
 <ul>
@@ -47,7 +46,7 @@ My favorite video games of ALL TIME are:
         <li>Deadlock</li>
         <li>Guilty Gear -Strive-</li>
     </ul>
-    <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2020/10/riskofrain.jpg?fit=1280%2C720&ssl=1" alt="ROR2" width="350">
+    <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2020/10/riskofrain.jpg?fit=1280%2C720&ssl=1" alt="ROR2" width="350"><br>
     
 If you know any of these games even remotely, please contact me with my discord username "pika43" and I will talk your ear off for days on end.<br>
 My favorite Music genres are:
