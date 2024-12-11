@@ -28,6 +28,7 @@ My favorite video games of ALL TIME are:
         <li>Slay the Spire</li>
         <li>Deepwoken</li>
         <li>Deadlock</li>
+        <li>Terraria</li>
         <li>Guilty Gear -Strive-</li>
     </ul>
     <img src="https://i0.wp.com/xboxera.com/wp-content/uploads/2020/10/riskofrain.jpg?fit=1280%2C720&ssl=1" alt="ROR2" width="350"><br>
