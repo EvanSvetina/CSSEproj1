@@ -64,8 +64,8 @@ hide: true
 <br><button>Useless Button that Doesn't Do Anything</button>
 <br><a id="b" href="https://www.youtube.com/watch?v=bv__9O5CZok" target="_blank">Do not click</a>
 <h2> Here's the necessary progress monitoring section.</h2>
-<b2><br><a href="https://nighthawkcoders.github.io/portfolio_2025/devops/tools/verify" target="_blank">Link to Tools: Verify</a>
-<br><a href="https://nighthawkcoders.github.io/portfolio_2025/devops/github/pages/play" target="_blank">Link to Tools: Play</a></b2>
+<b2><br><a href="https://evansvetina.github.io/CSSEproj1/devops/tools/verify" target="_blank">Link to Tools: Verify</a>
+<br><a href="https://evansvetina.github.io/CSSEproj1/devops/github/pages/play" target="_blank">Link to Tools: Play</a></b2>
 <br><p>During the creation of this blog, approximately... 0 things went smoothly. Overcoming many of these challenges felt weird at first - after all, I barely knew what I was doing at any given moment, and I felt quite lost in the sea of commands and variables that I didnt know the meaning of. However, with frequent help from outside sources, I managed to get the ground work done. Once I finally got my footing and began to try and understand everything I did, my perspective shifted.<br>
 <br>
 I slowly picked up new minor skills and figured out how to logic the blog, using heavy duty tools like ChatGPT when needed for help with syntax. I wanted to, as much as possible, avoid using ChatGPT to make logic for me because I wanted to try and solve my problems on my own or with my partner.<br>
