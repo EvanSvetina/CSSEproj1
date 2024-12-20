@@ -9,7 +9,10 @@ permalink: /snake/
     <source src="{{ site.baseurl }}/navigation/bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
-
+<audio id="eatFoodSFX" preload="auto">
+    <source src="{{ site.baseurl }}/navigation/eatFoodSFX.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
 </body>
 <style>
     a{
@@ -429,6 +432,14 @@ for (let button of snakeButtons) {
         };
 
         let backgroundMusic = document.getElementById("backgroundMusic");
+        let eatFoodSound = document.getElementById("eatFoodSFX");  // Add this line
+
+        let playEatSound = function() {
+            eatFoodSound.currentTime = 0;  // Reset the sound in case it's already playing
+            eatFoodSound.play().catch(function(error) {
+                console.error("Eat sound effect failed to play:", error);
+            });
+        };
 
         let playBackgroundMusic = function() {
             console.log("Attempting to play audio from:", backgroundMusic.querySelector('source').src);
@@ -579,6 +590,7 @@ for (let button of snakeButtons) {
                 if(checkBlock(snake[0].x, snake[0].y, food[i].x, food[i].y)){
                     snake[snake.length] = {x: snake[0].x, y: snake[0].y};
                     altScore(++score);
+                    playEatSound();
                     addFood(i);  // Only respawn the eaten food
                 }
             }
