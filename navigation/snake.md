@@ -31,12 +31,14 @@ permalink: /snake/
         padding: 10px 21px;
         font-size: 15px;
         text-align: center;
-        transform: scale(1.0)
+        transform: scale(1.0);
+        border-radius: 2px;
     }
     button:hover {
         cursor: pointer;
         background-color: rgb(70,70,70);
-        transform: scale(1.1)
+        transform: scale(1.1);
+        border-radius: 6px;
     }
     #color-selector button, #snake-color-selector button {
     margin: 5px;  /* This creates space around all sides of each button */
@@ -371,7 +373,7 @@ let selectedColorSnake = "rgb(200, 200, 200)";
         let snake_dir;
         let snake_next_dir;
         let snake_speed;
-        let food = {x: 0, y: 0};
+        let food = [{x: 0, y: 0}, {x: 0, y: 0}];  // Replace the single food object with an array
         let score;
         let wall;
 // Move this code inside your main game block, near the top with other initialization code
@@ -572,11 +574,13 @@ for (let button of snakeButtons) {
                 }
             }
 
-            if(checkBlock(snake[0].x, snake[0].y, food.x, food.y)){
-                snake[snake.length] = {x: snake[0].x, y: snake[0].y};
-                altScore(++score);
-                addFood();
-                activeDot(food.x, food.y);
+            // Replace the existing food check in mainLoop with this
+            for(let i = 0; i < food.length; i++) {
+                if(checkBlock(snake[0].x, snake[0].y, food[i].x, food[i].y)){
+                    snake[snake.length] = {x: snake[0].x, y: snake[0].y};
+                    altScore(++score);
+                    addFood(i);  // Only respawn the eaten food
+                }
             }
 
             ctx.beginPath();
@@ -594,12 +598,19 @@ for (let button of snakeButtons) {
                 screen_snake.style.boxShadow = `0 0 20px 10px ${rgbaColor}`;
             }
 
-            for (let i = 0; i < snake.length; i++) {
+            // Update the food rendering part
+            // Replace the single food activeDot call with this
+            // Paint snake
+            for(let i = 0; i < snake.length; i++) {
                 activeDot(snake[i].x, snake[i].y, i);
             }
 
+            // Render both food items
+            for(let i = 0; i < food.length; i++) {
+                activeDot(food[i].x, food[i].y);
+            }
+
             frameCounter++;
-            activeDot(food.x, food.y);
             setTimeout(mainLoop, snake_speed);
         };
 
@@ -611,7 +622,8 @@ for (let button of snakeButtons) {
             snake = [];
             snake.push({x: 0, y: 15});
             snake_next_dir = 1;
-            addFood();
+            addFood(0);
+            addFood(1);
             playBackgroundMusic();
             canvas.onkeydown = function(evt) {
                 changeDir(evt.keyCode);
@@ -676,15 +688,25 @@ for (let button of snakeButtons) {
     ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
 };
 
-        let addFood = function(){
-            food.x = Math.floor(Math.random() * ((canvas.width / BLOCK) - 1));
-            food.y = Math.floor(Math.random() * ((canvas.height / BLOCK) - 1));
-            for(let i = 0; i < snake.length; i++){
-                if(checkBlock(food.x, food.y, snake[i].x, snake[i].y)){
-                    addFood();
-                }
+       let addFood = function(foodIndex){
+        food[foodIndex].x = Math.floor(Math.random() * ((canvas.width / BLOCK) - 1));
+        food[foodIndex].y = Math.floor(Math.random() * ((canvas.height / BLOCK) - 1));
+        
+        // Check collision with snake
+        for(let i = 0; i < snake.length; i++){
+            if(checkBlock(food[foodIndex].x, food[foodIndex].y, snake[i].x, snake[i].y)){
+                addFood(foodIndex);
+                return;
             }
-        };
+        }
+        
+        // Check collision with other food
+        const otherFoodIndex = foodIndex === 0 ? 1 : 0;
+        if(checkBlock(food[foodIndex].x, food[foodIndex].y, food[otherFoodIndex].x, food[otherFoodIndex].y)){
+            addFood(foodIndex);
+            return;
+        }
+    };
 
         let checkBlock = function(x, y, _x, _y){
             return (x === _x && y === _y);
