@@ -200,7 +200,7 @@ permalink: /snake/
         </div>
         <!-- Game Over -->
 <div id="gameover" class="py-4 text-light">
-    <p>Sucks to Suck! Restart by <span style="color: rgb(214, 20, 15)">clicking below</span></p>
+    <p>Sucks to Suck! Restart by <span style="color: rgb(214, 20, 15)">clicking below</span> or pressing <span style="color: rgb(214, 20, 15)">r</span></p>
     <a id="new_game1" class="link-alert">We Go Again!</a>
     <a id="setting_menu1" class="link-alert">Difficulty Select/Settings</a><br>
     <p class="music-credit" style="margin-top: 20px; font-size: 16px;">
@@ -478,10 +478,16 @@ for (let button of snakeButtons) {
         };
 
         document.addEventListener("keydown", function(event) {
-            if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space"].includes(event.key)) {
-                event.preventDefault();
-            }
-        });
+    // Existing key prevention code
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space"].includes(event.key)) {
+        event.preventDefault();
+    }
+    // Add restart functionality
+    if (event.key.toLowerCase() === 'r' && SCREEN === SCREEN_GAME_OVER) {
+        playBackgroundMusic();
+        newGame();
+    }
+});
 
         window.onload = function(){
             button_new_game.onclick = function(){newGame();};
