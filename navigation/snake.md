@@ -230,7 +230,8 @@ permalink: /snake/
                 <input id="walloff" type="radio" name="wall" value="0"/>
                 <label for="walloff">Off (for babies)</label><br>
             </p>
-            <p>Select Background Color:
+            <h1><span style="color: rgb(214,20,15)" font-size="50.0pt">Select Background Color:</span></h1><br>
+            <p>
             <div id="color-selector">
             <button data-color="rgb(100, 100, 100)"><span style="color:rgb(150, 150, 150)">Default(Gray)</span></button>
             <button data-color="rgb(255, 0, 0)"><span style="color:rgb(255, 0, 0)">Red</span></button>
@@ -242,7 +243,8 @@ permalink: /snake/
             <button data-color="rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255)">White</span></button>
             </div>
             </p>
-            <p>Select Snake Color:
+            <h1><span style="color: rgb(214,20,15)" font-size="50.0pt">Select Snake Color:</span></h1><br>
+            <p>
             <div id="snake-color-selector">
             <button class="snake-button" data-color-snake="rgb(200, 200, 200)"><span style="color:rgb(200, 200, 200)">White</span></button>
             <button class="snake-button" data-color-snake="rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">Black</span></button>
