@@ -3,16 +3,15 @@ layout: base
 title: Snake 2.0
 permalink: /snake/
 ---
-
 <style>
-
-    body{
+    body {
+        background-color:rgb(20, 20, 20);
     }
-    .wrap{
+    .wrap {
         margin-left: auto;
         margin-right: auto;
     }
-    button{
+    button {
         border-style: solid;
         border-width: 4px;
         border-color: rgb(0, 0, 0);
@@ -22,91 +21,103 @@ permalink: /snake/
         font-size: 15px;
         text-align: center;
     }
-    canvas{
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(70,70,70)
+    }
+    canvas {
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color:rgb(255, 0, 0);
+        border-color: rgb(0, 0, 0);
         box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
     }
-    canvas:focus{
+    canvas:focus {
         outline: none;
     }
 
     /* All screens style */
-    #gameover p, #setting p, #menu p{
+    #gameover p, #setting p, #menu p {
         font-size: 20px;
-        
     }
 
-    #gameover a, #setting a, #menu a{
+    #gameover a, #setting a, #menu a {
         font-size: 30px;
         display: block;
     }
 
-    #gameover a:hover, #setting a:hover, #menu a:hover{
+    #gameover a:hover, #setting a:hover, #menu a:hover {
         cursor: pointer;
     }
 
-    #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before{
-        content: ">";
-        margin-right: 10px;
+    #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before {
+        content: "_";
+        margin-right: 5px;
+        color: rgb(255, 0, 0);
     }
 
-    #menu{
+    #menu {
         display: block;
     }
 
-    #gameover{
+    #gameover {
         display: none;
     }
 
-    #setting{
+    #setting {
         display: none;
     }
 
-    #setting input{
-        display:none;
+    #setting input {
+        display: none;
     }
 
-    #setting label{
+    #setting label {
         cursor: pointer;
     }
 
-    #setting input:checked + label{
+    #setting input:checked + label {
         background-color: #FF0000;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+    }
+
+    #secretMessage {
+        display: none; 
+    }
+
+    #specialHiddenButton {
+        display: none; 
     }
 </style>
 
-
-<h2><span font-size="36pt">Snake</span></h2>
+<h2 style="text-align: center; font-size:250%"><span>Snake 2.0</span></h2>
 <div class="container">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-        <p class="fs-4">Score: <span id="score_value">0</span></p>
+        <p style="text-align: center;" class="fs-4">World Snake Hunger Reduced By: <span style="color:red" id="score_value">0</span><br>(Score)</p>
     </header>
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Snake "2.0" <br>Press <span style="background-color:rgb(0, 0, 0); color:rgb(214, 20, 15)">Space</span></p>
-            <a id="new_game" class="link-alert">new game</a>
-            <a id="setting_menu" class="link-alert">settings</a>
+            <p>Snake "2.0" <br></p>
+            <a id="new_game" class="link-alert">New Attempt</a>
+            <a id="setting_menu" class="link-alert">Settings</a>
         </div>
         <!-- Game Over -->
         <div id="gameover" class="py-4 text-light">
-            <p>Sucks to Suck! Restart with <span style="background-color:rgb(0, 0, 0); color: rgb(214, 20, 15)">Space</span></p>
+            <p>Sucks to Suck! Restart with <span style="color: rgb(214, 20, 15)">Space</span></p>
             <a id="new_game1" class="link-alert">We Go Again!</a>
-            <a id="setting_menu1" class="link-alert">Difficulty Select/Settings</a>
+            <a id="setting_menu1" class="link-alert">Difficulty Select/Settings</a><br>
         </div>
         <!-- Play Screen -->
         <canvas id="snake" class="wrap" width="720" height="720" tabindex="1"></canvas>
         <!-- Settings Screen -->
         <div id="setting" class="py-4 text-light">
-            <p>Settings <br><span style="background-color:rgb(0, 0, 0); color: rgb(214, 20, 15)">Click Start to Return</span>
+            <p>Settings <br><span style="color: rgb(214, 20, 15)">Click Start to Return</span>
             <a id="new_game2" class="link-alert">Start</a>
             <br>
             <h1><span style="color: rgb(214,20,15)" font-size="80.0pt">Difficulty Select</span></h1><br>
-            <p> <input id="speed1" type="radio" name="speed" value="120" checked/>
+            <p> 
+                <input id="speed1" type="radio" name="speed" value="120" checked/>
                 <label for="speed1">Baby Mode</label><br>
                 <input id="speed2" type="radio" name="speed" value="100" checked/>
                 <label for="speed2">Slightly Less Boring Mode</label><br>
@@ -143,6 +154,42 @@ permalink: /snake/
             <button class="snake-button" data-color-snake="#FFD700">Gold</button>
             </div>
             </p>
+            <p>I wonder if there's a cheat code. That would be pretty funny. I wonder if this cheat code is anything like the """""secret""""" on the about page of my blog. Hm...
+            <div id="secretMessage">
+                <span style="color:gold" font-size="70%">Secret Color: Unlocked. Click the button to see what it is.</span>
+            </div>
+            <button id="specialHiddenButton" style="display: none; ">Secret</button>
+<script>
+    let codeInputted = false;
+    const konamiCode = [
+        "ArrowUp", "ArrowUp",
+        "ArrowDown", "ArrowDown",
+        "ArrowLeft", "ArrowRight",
+        "ArrowLeft", "ArrowRight",
+        "b", "a"
+    ];
+    let inputSequence = [];
+    window.addEventListener("keydown", (event) => {
+        inputSequence.push(event.key);
+        // Keep the array length the same as the Konami Code
+        if (inputSequence.length > konamiCode.length) {
+            inputSequence.shift();
+        }
+        // Check if the input matches the Konami Code
+        if (JSON.stringify(inputSequence) === JSON.stringify(konamiCode)) {
+            document.getElementById("secretMessage").style.display = "block";
+            codeInputted = true;
+            document.getElementById("specialHiddenButton").style.display = "block"; // Show the hidden button
+        }
+    });
+    // Declare rainbowEffectEnabled globally
+let rainbowEffectEnabled = false;
+// Add click event listener to the special hidden button
+document.getElementById("specialHiddenButton").addEventListener("click", function() {
+    rainbowEffectEnabled = true
+    alert("Rainbow effect is now " + (rainbowEffectEnabled ? "enabled! Disable by reloading the page (and, in doing so, resetting the matrix)." : "disabled!"));
+});
+</script>
 <script>
     // Variable to store the selected color
     let selectedColorBG = "gray";
@@ -357,10 +404,11 @@ permalink: /snake/
             ctx.fillStyle = selectedColorBG;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
-            for(let i = 0; i < snake.length; i++){
-                activeDot(snake[i].x, snake[i].y);
+            // Paint snake with pulsating rainbow effect
+            for (let i = 0; i < snake.length; i++) {
+                activeDot(snake[i].x, snake[i].y, i);
             }
-            
+            frameCounter++; // Increment the frame counter to animate the rainbow effect
             // Paint food
             activeDot(food.x, food.y);
             // Debug
@@ -415,12 +463,30 @@ permalink: /snake/
         }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
-        let activeDot = function(x, y){
-            ctx.fillStyle = selectedColorSnake;
-            ctx.shadowBlur = 15;
-            ctx.shadowColor = selectedColorSnake;
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
-        }
+        let rainbowColors = [
+            "#FF0000", // Red
+            "#FF7F00", // Orange
+            "#FFFF00", // Yellow
+            "#00FF00", // Green
+            "#0000FF", // Blue
+            "#4B0082", // Indigo
+            "#9400D3"  // Violet
+        ];
+        let frameCounter = 0;
+        let activeDot = function(x, y, segmentIndex) {
+    if (rainbowEffectEnabled) {
+        // Calculate the color for this segment based on frameCounter and offset
+        let colorIndex = (frameCounter + segmentIndex) % rainbowColors.length;
+        ctx.fillStyle = rainbowColors[colorIndex];
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = rainbowColors[colorIndex];
+    } else {
+        // Use the selected snake color when rainbow effect is disabled
+        ctx.fillStyle = selectedColorSnake;
+        ctx.shadowBlur = 0;
+    }
+    ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+};
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
