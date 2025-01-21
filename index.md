@@ -61,27 +61,6 @@ hide: true
         </b1>
 <br><button>Useless Button that Doesn't Do Anything</button>
 <br><a id="b" href="https://www.youtube.com/watch?v=bv__9O5CZok" target="_blank">Do not click</a>
-<script>
-const randomValues = ["Hold this L buddy", "Try pressing the arrows next time", "The walls kill you, by the way", "Oof! That's a rough one!", "Try again? I mean, we know how it's going to go, but it might be worth a shot"];
-let currentRandomString = "";
-        function getRandomValue() {
-            const randomIndex = Math.floor(Math.random() * randomValues.length);
-            return randomValues[randomIndex];
-        }
-        // Event listener for the spacebar
-        document.addEventListener("keydown", (event) => {
-            if (event.code === "Space") {
-                // Prevent the default spacebar scrolling behavior
-                event.preventDefault();
-                // Get a new random value and store it in the global variable
-                currentRandomString = getRandomValue();
-                // Update the content of the h1 element
-                document.getElementById("randomValue").textContent = currentRandomString;
-                // Log the current random string for reference (optional)
-                console.log("Current Random String:", currentRandomString);
-            }
-        });
-</script>
 <h2> Here's the necessary progress monitoring section.</h2>
 <b2><br><a href="https://evansvetina.github.io/CSSEproj1/devops/tools/verify" target="_blank">Link to Tools: Verify</a>
 <br><a href="https://evansvetina.github.io/CSSEproj1/devops/github/pages/play" target="_blank">Link to Tools: Play</a></b2>
@@ -90,8 +69,11 @@ let currentRandomString = "";
 I slowly picked up new minor skills and figured out how to logic the blog, using heavy duty tools like ChatGPT when needed for help with syntax. I wanted to, as much as possible, avoid using ChatGPT to make logic for me because I wanted to try and solve my problems on my own or with my partner.<br>
 <br>
 This initial breakthrough has helped me create this silly little blog, and I'm excited for the future I have in this class!</p>
-
 <br>
+<h1>Student Lessons</h1>
+<br><a href="csse/javascript/fundamentals/iteration/hw" target="_blank">Iterations: HW</a></b2>
+<br><a href="https://evansvetina.github.io/CSSEproj1/devops/github/pages/play" target="_blank">Iterations: Hax</a></b2>
+<br><br><br>
 <h1>CS PANEL</h1>
 <p><br>Stuff I learned/Notes to self:
 <ul>
@@ -121,6 +103,7 @@ This initial breakthrough has helped me create this silly little blog, and I'm e
             <li>Show passion and try and show yourself on paper when writing to colleges</li>
             <li>Extracurriculars -> more connections, whether it's just STEM or something CS related</li>
             <li>Only do clubs you care abt/passion</li>
+            <li>Career fairs are good, allow for connections (HS or College)</li>
         </ul>
     <li>Note: This isnt optional - learning these skills will be critical to future success in CS</li>
 <ul>
