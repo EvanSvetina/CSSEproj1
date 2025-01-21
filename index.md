@@ -71,8 +71,8 @@ I slowly picked up new minor skills and figured out how to logic the blog, using
 This initial breakthrough has helped me create this silly little blog, and I'm excited for the future I have in this class!</p>
 <br>
 <h1>Student Lessons</h1>
-<br><a href="csse/javascript/fundamentals/iteration/hw" target="_blank">Iterations: HW</a></b2>
-<br><a href="https://evansvetina.github.io/CSSEproj1/devops/github/pages/play" target="_blank">Iterations: Hax</a></b2>
+<br><a href="csse/javascript/fundamentals/iteration/hw" target="_blank">Iterations: HW</a>
+<br><a href="csse/javascript/fundamentals/iteration/Popcorn_Hacks" target="_blank">Iterations: Hax</a>
 <br><br><br>
 <h1>CS PANEL</h1>
 <p><br>Stuff I learned/Notes to self:
